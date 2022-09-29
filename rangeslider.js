@@ -1,12 +1,5 @@
 jk(document).on('knack-page-render.any', function (event, view, records) {
-    // var jq = $.noConflict();
-
-    console.log("Test")
-    // setTimeout(() => {
-    // Add sliders to the page
     $(".kn-instructions:contains('slider')").each(function () {
-        // Obtain Original Input
-
         if ($(this).siblings('.control').length) {
             var original_input_el = $(this).siblings('.control').children().first();
             console.log("Used Control Level");
@@ -49,7 +42,6 @@ jk(document).on('knack-page-render.any', function (event, view, records) {
 
         var selector = '[data-rangeslider]';
         var $inputRange = $(selector);
-        console.log($inputRange)
 
         /** Setup RangeSlider Feedback **/
         function valueOutput(element) {
@@ -91,7 +83,5 @@ jk(document).on('knack-page-render.any', function (event, view, records) {
 
         // Initial Setting of Width
         $(window).trigger('resize');
-
     });
-    // }, 1000);
 });
